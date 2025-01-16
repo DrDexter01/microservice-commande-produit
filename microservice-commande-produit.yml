@@ -1,1 +1,23 @@
 
+spring:
+  application:
+    name: microservice-commande-produit
+  datasource:
+    url: jdbc:mysql://localhost:3306/user
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: rabie123
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 9000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
